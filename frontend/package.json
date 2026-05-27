@@ -1,7 +1,7 @@
 {
   "name": "md-html-previewer",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -13,7 +13,10 @@
     "github-markdown-css": "^5.6.1",
     "highlight.js": "^11.10.0",
     "marked": "^14.1.2",
-    "vue": "^3.5.10"
+    "mermaid": "^11.3.0",
+    "pako": "^2.1.0",
+    "vue": "^3.5.10",
+    "vue-router": "^4.4.5"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.4",
