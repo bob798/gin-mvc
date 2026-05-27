@@ -1,0 +1,12 @@
+services:
+  app:
+    build: .
+    image: md-html-previewer:latest
+    container_name: previewer
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/backend/data
+    environment:
+      PORT: "8000"

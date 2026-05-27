@@ -1,8 +1,4 @@
 <script setup>
-import { useI18n } from '../composables/useI18n'
-
-const { t } = useI18n()
-
 defineProps({
   modelValue: String,
   filename: String,
@@ -14,15 +10,15 @@ defineEmits(['update:modelValue'])
 <template>
   <section class="pane">
     <div class="pane-head">
-      <span class="pane-title">{{ t('source') }}</span>
-      <span class="hint">{{ filename || t('untitled') }} · {{ mode === 'md' ? t('modeMd') : t('modeHtml') }}</span>
+      <span class="pane-title">源代码</span>
+      <span class="hint">{{ filename || '未命名' }} · {{ mode === 'md' ? 'Markdown' : 'HTML' }}</span>
     </div>
     <textarea
       class="editor"
       spellcheck="false"
       :value="modelValue"
       @input="$emit('update:modelValue', $event.target.value)"
-      :placeholder="mode === 'md' ? t('placeholderMd') : t('placeholderHtml')"
+      :placeholder="`粘贴 / 编辑 ${mode === 'md' ? 'Markdown' : 'HTML'},或把文件拖到窗口中...`"
     ></textarea>
   </section>
 </template>
