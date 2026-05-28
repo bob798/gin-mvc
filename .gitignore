@@ -1,16 +1,16 @@
-# Binaries for programs and plugins
-*.exe
-*.exe~
-*.dll
-*.so
-*.dylib
+# dependencies
+node_modules/
+**/__pycache__/
+*.pyc
+.venv/
+venv/
 
-# Test binary, build with `go test -c`
-*.test
+# build output
+dist/
 
-# Output of the go coverage tool, specifically when used with LiteIDE
-*.out
+# data
+backend/data/
 
-dist
-ginmvc.yaml
-*/*-packr.go
+# misc
+*.log
+.DS_Store

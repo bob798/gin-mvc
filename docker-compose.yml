@@ -1,8 +1,8 @@
 services:
   app:
     build: .
-    image: md-html-previewer:latest
-    container_name: previewer
+    image: md-preview:latest
+    container_name: md-preview
     restart: unless-stopped
     ports:
       - "8000:8000"
